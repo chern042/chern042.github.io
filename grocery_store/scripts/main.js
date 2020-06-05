@@ -94,10 +94,12 @@ function selectedItems(){
 			productPrices.push(item);
 			var itemIndex = productPrices.indexOf(item);
 			if(itemIndex>=1){
-				if(productPrices[itemIndex].price < productPrices[itemIndex-1].price){
-					var temp = productPrices[itemIndex-1];
-					productPrices[itemIndex-1] = productPrices[itemIndex];
-					productPrices[itemIndex] = temp;
+				for(let j=0;j<productPrices.length-1;j++){
+					if(productPrices[itemIndex].price < productPrices[j].price){
+						var temp = productPrices[j];
+						productPrices[j] = productPrices[itemIndex];
+						productPrices[itemIndex] = temp;
+					}
 				}
 			}
 		}
@@ -115,11 +117,7 @@ function selectedItems(){
 	para.appendChild(document.createElement("br"));
 	var paraChild = para.childNodes;
 	for (let i = 0; i <productPrices.length; i++) {
-		//if(para.getRootNode())
-			//console.log(para.getRootNode())
-			//console.log(para.nextElementSibling)
-		//console.log(paraChild)
-		//console.log(para.nextElementSibling)
+
 
 		para.appendChild(document.createTextNode(productPrices[i].name+": "+productPrices[i].price));
 			para.appendChild(document.createElement("br"));
