@@ -2,35 +2,39 @@
 // This function is called when any of the tab is clicked
 // It is adapted from https://www.w3schools.com/howto/howto_js_tabs.asp
 
-function openInfo(evt, tabName) {
 
-	// Get all elements with class="tabcontent" and hide them
+function openNav(evt, tabName, color, elmnt){//, elmnt, color) {
+	//var i, tabcontent, tablinks;
 	tabcontent = document.getElementsByClassName("tabcontent");
 	for (i = 0; i < tabcontent.length; i++) {
 		tabcontent[i].style.display = "none";
 	}
 
-	// Get all elements with class="tablinks" and remove the class "active"
-	tablinks = document.getElementsByClassName("tablinks");
+	tablinks = document.getElementsByClassName("tablink");
 	for (i = 0; i < tablinks.length; i++) {
 		tablinks[i].className = tablinks[i].className.replace(" active", "");
-	}
+		tablinks[i].style.backgroundColor = "";
 
-	// Show the current tab, and add an "active" class to the button that opened the tab
+	}
+	console.log(elmnt, evt)
 	document.getElementById(tabName).style.display = "block";
 	evt.currentTarget.className += " active";
+	elmnt.style.backgroundColor = color;
+
 
 }
 
 
-	
 // generate a checkbox list from a list of products
 // it makes each product name as the label for the checkbos
 
 function populateListProductChoices(slct1, slct2) {
 	var s1 = document.getElementById(slct1);
 	var s2 = document.getElementById(slct2);
+
 	var checkedOpts = [];
+	var category = s1[s1.length-2].value;
+
 
 	for (let i=0; i<s1.length;i++){
 		if(s1[i].checked){
@@ -38,11 +42,13 @@ function populateListProductChoices(slct1, slct2) {
 		}
 	}
 
+
+
 	// s2 represents the <div> in the Products tab, which shows the product list, so we first set it empty
     s2.innerHTML = "";
 
 	// obtain a reduced list of products based on restrictions
-	var optionArray = restrictListProducts(products, checkedOpts);
+	var optionArray = restrictListProducts(products, checkedOpts, category);
 
 	// for each item in the array, create a checkbox element, each containing information such as:
 	// <input type="checkbox" name="product" value="Bread">
