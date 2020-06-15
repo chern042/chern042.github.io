@@ -10,7 +10,8 @@ var products = [
 		glutenFree: true,
 		organic: true,
 		price: 1.99,
-		category:'vegetables'
+		category:'vegetables',
+		image:''
 	},
 	{
 		name: "bread",
@@ -18,7 +19,8 @@ var products = [
 		glutenFree: false,
 		organic: true,
 		price: 2.35,
-		category:'grains'
+		category:'grains',
+		image:''
 	},
 	{
 		name: "salmon",
@@ -26,7 +28,8 @@ var products = [
 		glutenFree: true,
 		organic: true,
 		price: 10.00,
-		category:'protein'
+		category:'protein',
+		image:''
 	},
 	{
 		name: "chicken",
@@ -34,7 +37,8 @@ var products = [
 		glutenFree: true,
 		organic: false,
 		price: 6.00,
-		category:'protein'
+		category:'protein',
+		image:''
 	},
 	{
 		name: "pork",
@@ -42,7 +46,8 @@ var products = [
 		glutenFree: true,
 		organic: false,
 		price: 7.00,
-		category:'protein'
+		category:'protein',
+		image:''
 	},
 	{
 		name: "eggs",
@@ -50,7 +55,8 @@ var products = [
 		glutenFree: true,
 		organic: true,
 		price: 3.50,
-		category:'protein'
+		category:'protein',
+		image:''
 	},
 	{
 		name: "lettuce",
@@ -58,7 +64,8 @@ var products = [
 		glutenFree: true,
 		organic: true,
 		price: 2.00,
-		category:'vegetables'
+		category:'vegetables',
+		image:''
 	},
 	{
 		name: "Cookies",
@@ -66,7 +73,8 @@ var products = [
 		glutenFree: false,
 		organic: false,
 		price: 3.00,
-		category:'candy'
+		category:'candy',
+		image:''
 	},
 	{
 		name: "Vegan Cookies",
@@ -74,7 +82,8 @@ var products = [
 		glutenFree: false,
 		organic: false,
 		price: 4.00,
-		category:'candy'
+		category:'candy',
+		image:''
 	},
 	{
 		name: "Oranges",
@@ -82,7 +91,8 @@ var products = [
 		glutenFree: true,
 		organic: false,
 		price: 2.00,
-		category:'fruit'
+		category:'fruit',
+		image:''
 	},
 
 ];
@@ -108,10 +118,8 @@ function restrictListProducts(prods, restriction, category) {
 		}
 
 	for(let i=0;i<prods.length;i++){
-		console.log('true?',prods[i].name,'derp')//,product_names.find(prods[i].name))
 
 		if(product_names.indexOf(prods[i].name)!==-1){
-			console.log('true?',prods[i].category,'derp',category)
 			if(prods[i].category !== category){
 				var index = product_names.indexOf(prods[i].name)
 				product_names.splice(index,1)
@@ -119,7 +127,6 @@ function restrictListProducts(prods, restriction, category) {
 		}
 	}
 
-	console.log('prods2:',product_names)
 
 	return product_names;
 }

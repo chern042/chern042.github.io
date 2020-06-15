@@ -47,6 +47,8 @@ function populateListProductChoices(slct1, slct2) {
 	// s2 represents the <div> in the Products tab, which shows the product list, so we first set it empty
     s2.innerHTML = "";
 
+
+
 	// obtain a reduced list of products based on restrictions
 	var optionArray = restrictListProducts(products, checkedOpts, category);
 
@@ -56,18 +58,32 @@ function populateListProductChoices(slct1, slct2) {
 
 	for (i = 0; i < optionArray.length; i++) {
 
+		var img = document.createElement('img');
+
 		var productName = optionArray[i];
+		img.src = "resources/"+productName+".jpg";
+		img.style.maxHeight = "100px";
+		img.style.maxWidth = "100px";
+		img.style.paddingLeft = "10px";
+		img.style.paddingRight = "10px"
+		img.style.paddingBottom = "10px";
+
+
+
 		// create the checkbox and add in HTML DOM
 		var checkbox = document.createElement("input");
 		checkbox.type = "checkbox";
 		checkbox.name = "product";
 		checkbox.value = productName;
 		s2.appendChild(checkbox);
+		s2.appendChild(img)
+		productName = productName.charAt(0).toUpperCase() + productName.slice(1)
 
 		// create a label for the checkbox, and also add in HTML DOM
 		var label = document.createElement('label')
-		label.htmlFor = productName;
+		label.htmlFor = productName
 		label.appendChild(document.createTextNode(productName));
+		label.style.paddingLeft = "50px"
 		s2.appendChild(label);
 
 		// create a breakline node and add in HTML DOM
@@ -116,17 +132,23 @@ function selectedItems(){
 
 	var c = document.getElementById('displayCart');
 	c.innerHTML = "";
-	
+
+
+
 	// build list of selected item
 	var para = document.createElement("P");
 	para.innerHTML = "You selected : ";
 	para.appendChild(document.createElement("br"));
 	var paraChild = para.childNodes;
+	var productName = "";
 	for (let i = 0; i <productPrices.length; i++) {
 
+		productName = productPrices[i].name.charAt(0).toUpperCase() + productPrices[i].name.slice(1)
 
-		para.appendChild(document.createTextNode(productPrices[i].name+": "+productPrices[i].price));
+
+		para.appendChild(document.createTextNode(productName+": "+productPrices[i].price));
 			para.appendChild(document.createElement("br"));
+
 	}
 
 

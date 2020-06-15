@@ -46,7 +46,7 @@ footer {
   border: 1px solid #ccc;
   /*border-top: none;*/
 }
-@keyframes color-client-in {
+@keyframes color-restrictions-in {
   /* You could think of as "step 1" */
   0% {
     background: white;
@@ -84,9 +84,9 @@ footer {
   width: 33.3%;
 }
 
-#Client {
+#Restrictions {
   /*background-color:red;*/
-  animation: color-client-in 5s; /* other keywords like "infinite alternate" can be useful here */
+  animation: color-restrictions-in 5s; /* other keywords like "infinite alternate" can be useful here */
 }
 #Products {
   /*background-color:orange;*/
@@ -96,4 +96,3 @@ footer {
   /*background-color:green;*/
   animation: color-cart-in 5s; /* other keywords like "infinite alternate" can be useful here */
 }
-
