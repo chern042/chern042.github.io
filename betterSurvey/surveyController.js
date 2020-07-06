@@ -64,8 +64,12 @@ module.exports = function(app){
         var color = readData("color");
         var fruit = readData("fruit");
         var animal = readData("animal");
-        res.render('showResults', {results: [color, fruit, animal]});
-        console.log([color, fruit, animal]);
+        var school = readData("school");
+        var giftSpend = readData("giftSpend");
+        var yearBorn = readData("yearBorn");
+
+        res.render(__dirname+'/views/pages/showResults', {results: [color, fruit, animal, school, giftSpend, yearBorn]});
+        console.log([color, fruit, animal, school, giftSpend, yearBorn]);
     });
 
 

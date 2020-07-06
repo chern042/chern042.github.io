@@ -23,5 +23,23 @@
         <li><%= results[2][i].animal %> :  <%= results[2][i].count %></li>
     <% } %>    
     </ul>
+    <h2>Years Born</h2>
+    <ul>
+        <% for (var i=0; i<results[5].length; i++){ %>
+            <li><%= results[5][i].yearBorn %> :  <%= results[5][i].count %></li>
+        <% } %>
+    </ul>
+    <h2>Schools</h2>
+    <ul>
+        <% for (var i=0; i<results[3].length; i++){ %>
+            <li><%= results[3][i].school %> :  <%= results[3][i].count %></li>
+        <% } %>
+    </ul>
+    <h2>Average $ Spent on Gifts</h2>
+    <ul>
+        <% for (var i=0; i<results[4].length; i++){ %>
+            <li><%= results[4][i].giftSpend %> :  <%= results[4][i].count %></li>
+        <% } %>
+    </ul>
 </body>
 </html>
