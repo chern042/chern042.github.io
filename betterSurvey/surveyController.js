@@ -7,12 +7,16 @@ var fs = require('fs');
 function readData(fileName){
     let dataRead = fs.readFileSync('./data/' + fileName + '.json');
     let infoRead = JSON.parse(dataRead);
+    console.log('info:',infoRead)
     return infoRead;
 }
 
 // read the data file
 function writeData(info, fileName){
+    //console.log('data:',info)
     data = JSON.stringify(info);
+    //console.log('stringified:',data)
+
     fs.writeFileSync('./data/' + fileName + '.json', data);
 }
 
@@ -21,16 +25,31 @@ function writeData(info, fileName){
 // I assume we always just add 1 to a single item
 function combineCounts(name, value){
     // console.log(value);
+    var itemArr = [];
     info = readData(name);
      // will be useful for text entry, since the item typed in might not be in the list
     var found = 0;
+    console.log('wtf',info[name], value, info.length )
     for (var i=0; i<info.length; i++){
-        if (info[i][name] === value){
+        console.log('wtfff',info[i][name] )
+
+        if (info[i][name] === value || info[name]===value){
+            console.log('derp',info[name])
             info[i].count = parseInt(info[i].count) + 1;
             found = 1;
         }
     }
+
     if (found === 0){
+        //info = {
+          //  [name:
+        //}
+        //info.[name] = name;
+        //info[name] = value;
+        //info.count = 1;
+        //info[count] = 1;
+
+
         info.push({[name] : value, count: 1});
     }
     writeData(info, name);
@@ -49,33 +68,53 @@ module.exports = function(app){
         console.log([color, fruit, animal]);
     });
 
+
+
     // when a user goes to localhost:3000/niceSurvey
     // serve a static html (the survey itself to fill in)
-    app.get('/niceSurvey', function(req, res){
-        res.sendFile(__dirname+'/views/niceSurvey.html');
+    /*app.get('/', function(req, res){
+        //res.sendFile(__dirname+'/views/pages/index.ejs');
+        res.render(__dirname+'/views/pages/index.ejs');
+
+    });*/
+
+    app.get('/', function(req, res){
+        //res.sendFile(__dirname+'/views/pages/index.ejs');
+        res.render(__dirname+'/views/pages/index.ejs');
+
     });
 
     // when a user types SUBMIT in localhost:3000/niceSurvey 
     // the action.js code will POST, and what is sent in the POST
     // will be recuperated here, parsed and used to update the data files
-    app.post('/niceSurvey', urlencodedParser, function(req, res){
-        console.log(req.body);
+    app.post('/survey', urlencodedParser, function(req, res){
+        //console.log('bodeh',req.body);
         var json = req.body;
         for (var key in json){
             console.log(key + ": " + json[key]);
+            //if()
             // in the case of checkboxes, the user might check more than one
-            if ((key === "color") && (json[key].length === 2)){
-                for (var item in json[key]){
-                    combineCounts(key, json[key][item]);
-                }
-            }
-            else {
+            //if ((key.substr(0,5) === "color") && (json[key].length === 3)){
+
+                //for (var item in json[key]){
+                   // console.log('reach ifff?',key.substr(0,5),json[key][item],item)
+
+                 //   combineCounts(key.substr(0,5), json[key][item]);
+               // }
+            //}
+            //else {
+            if(json[key]!=='' && key.substr(key.length-1)!== ']'){
                 combineCounts(key, json[key]);
+            }else if(json[key]!==''){
+                console.log('test',)
+                combineCounts(key.substr(0,5), json[key]);
             }
+                //combineCounts(key, json[key]);
+            //}
         }
         // mystery line... (if I take it out, the SUBMIT button does change)
         // if anyone can figure this out, let me know!
-        res.sendFile(__dirname + "/views/niceSurvey.html");
+        res.sendFile(__dirname + "/views/pages/index.ejs");
     });
     
 

@@ -1,0 +1,48 @@
+
+      <%- include ("../partials/head.ejs") %>
+      <div class="content container-md my-3 border bg-dark text-white text-center">
+            <h1>Survey</h1>
+            <form class="myForm" >
+                <div class="row my-5">
+                    <%- include ("../partials/question_1.ejs") %>
+                </div>
+              <br>
+                <div class="row my-5">
+                    <%- include ("../partials/question_2.ejs") %>
+                </div>
+
+              <br>
+
+                <div class="row my-5">
+                    <%- include ("../partials/question_3.ejs") %>
+                </div>
+              <br>
+
+                <div class="row my-5">
+                    <%- include ("../partials/question_4.ejs") %>
+                </div>
+                <br>
+
+                <div class="row my-5">
+                    <%- include ("../partials/question_5.ejs") %>
+                </div>
+                <br>
+
+                <div class="row my-5">
+                    <%- include ("../partials/question_6.ejs") %>
+                </div>
+                <br>
+
+              <button type="submit" class="btn btn-warning" id="submit">Submit</button>
+              <p id="thanks"></p>
+            </form>
+            <!--</div>-->
+
+      </div>
+
+      <script src="javascripts/year-select.js" type="text/javascript"></script>
+      <script src="javascripts/slider.js" type="text/javascript"></script>
+      <script src="assets/action.js"></script>
+
+      </body>
+</html> 

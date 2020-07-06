@@ -1,12 +1,15 @@
 // Entry point for the application
 
 // express application
+//import * as path from "ejs/ejs";
+
 var express = require('express');
+//var path = require('ejs')
 // require the controller we make
 var surveyController = require('./surveyController');
+var path = require('path');
 
 var app = express();
-
 // set up template engine
 app.set('view engine', 'ejs');
 

@@ -4,9 +4,10 @@
   "description": "A survey on color preference",
   "main": "app.js",
   "scripts": {
+    "start": "node app.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "Caroline Barrière",
+  "author": "Carlos Hernandez",
   "license": "ISC",
   "dependencies": {
     "body-parser": "^1.19.0",

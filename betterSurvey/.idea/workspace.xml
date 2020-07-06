@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="81050c20-2bf0-4f2d-afb7-895212a40e6d" name="Default Changelist" comment="" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="CSS File" />
+        <option value="JavaScript File" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="ProjectId" id="1eFW1yvTXa2sUddBBfZYxVEupCA" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="PropertiesComponent">
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="javascript.nodejs.core.library.configured.version" value="8.11.2" />
+    <property name="js.last.introduce.type" value="VAR" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/public/javascripts" />
+    <property name="list.type.of.created.stylesheet" value="CSS" />
+    <property name="nodejs_package_manager_path" value="npm" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\batis\Desktop\SEG3125\Module 6\Lab\chern042.github.io\betterSurvey\public\javascripts" />
+      <recent name="C:\Users\batis\Desktop\SEG3125\Module 6\Lab\chern042.github.io\betterSurvey\views\partials" />
+      <recent name="C:\Users\batis\Desktop\SEG3125\Module 6\Lab\chern042.github.io\betterSurvey\public\assets" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\batis\Desktop\SEG3125\Module 6\Lab\chern042.github.io\betterSurvey\public\javascripts" />
+      <recent name="C:\Users\batis\Desktop\SEG3125\Module 6\Lab\chern042.github.io\betterSurvey\views\pages" />
+      <recent name="C:\Users\batis\Desktop\SEG3125\Module 6\Lab\chern042.github.io\betterSurvey\public" />
+      <recent name="C:\Users\batis\Desktop\SEG3125\Module 6\Lab\chern042.github.io\betterSurvey\views" />
+      <recent name="C:\Users\batis\Desktop\SEG3125\Module 6\Lab\chern042.github.io\betterSurvey" />
+    </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="81050c20-2bf0-4f2d-afb7-895212a40e6d" name="Default Changelist" comment="" />
+      <created>1593917610383</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1593917610383</updated>
+      <workItem from="1593917614467" duration="14080000" />
+      <workItem from="1593997252179" duration="17955000" />
+      <workItem from="1594017782652" duration="833000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+</project>
