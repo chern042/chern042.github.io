@@ -96,17 +96,6 @@ module.exports = function(app){
         var json = req.body;
         for (var key in json){
             console.log(key + ": " + json[key]);
-            //if()
-            // in the case of checkboxes, the user might check more than one
-            //if ((key.substr(0,5) === "color") && (json[key].length === 3)){
-
-                //for (var item in json[key]){
-                   // console.log('reach ifff?',key.substr(0,5),json[key][item],item)
-
-                 //   combineCounts(key.substr(0,5), json[key][item]);
-               // }
-            //}
-            //else {
             if(json[key]!=='' && key.substr(key.length-1)!== ']'){
                 combineCounts(key, json[key]);
             }else if(json[key]!==''){
